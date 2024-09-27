@@ -13,7 +13,7 @@ classdef RFSwitch
             %RFSWITCH Construct an instance of this class
             %   Detailed explanation goes here
             obj.baudrate = 9600;
-            obj.serialPort = serialport(portName,baudrate);
+            obj.serialPort = serialport(portName,obj.baudrate);
             configureTerminator(obj.serialPort,"CRLF")
         end
         function [] = setRFChannel(obj,channel)
